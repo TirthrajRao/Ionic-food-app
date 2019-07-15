@@ -1,0 +1,30 @@
+<ion-header>
+  <ion-toolbar>
+
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>view-item</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+<ion-item *ngFor = "let item of food">
+  <ion-grid>
+    <ion-row>
+      <ion-col size="3">
+        {{item.title}}
+      </ion-col>
+      <ion-col size="2">
+          {{item.number}}
+        </ion-col>
+      <ion-col size="3">
+          <ion-button color="primary" type="submit" (click)= 'editItem(item.uniqueKey)' >Edit</ion-button>
+        </ion-col>
+        <ion-col size="4">
+            <ion-button color="warning">Delete</ion-button>
+        </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-item>
+</ion-content>

@@ -1,5 +1,7 @@
 {
   "name": "myFood",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "angular"
 }

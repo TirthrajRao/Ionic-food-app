@@ -4,24 +4,22 @@
       <ion-menu-button></ion-menu-button>
     </ion-buttons>
     <ion-title>
-      List
+      Add Item
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
-  <ion-list>
-    <ion-item *ngFor="let item of items">
-      <ion-icon [name]="item.icon" slot="start"></ion-icon>
-      {{item.title}}
-      <div class="item-note" slot="end">
-        {{item.note}}
-      </div>
-    </ion-item>
-  </ion-list>
-  <!--
-    <div *ngIf="selectedItem" padding>
-      You navigated here from <b>{{selectedItem.title }}</b>
-    </div>
-  -->
+<form [formGroup]="todo" (ngSubmit)="logForm(todo)">
+      <ion-item>
+        <ion-label position="floating">Add Item</ion-label>
+        <ion-input type="text" formControlName="title"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">No Of Days</ion-label>
+        <ion-input formControlName="number" type = "number"></ion-input>
+      </ion-item>
+      <!-- <ion-title ion-button type="submit" [disabled]="!todo.valid">What's Your Today's Food</ion-title> -->
+      <ion-button type="submit" [disabled]="!todo.valid">Submit</ion-button>
+    </form>
 </ion-content>

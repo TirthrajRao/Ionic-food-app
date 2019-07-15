@@ -1,13 +1,24 @@
 import { Component } from '@angular/core';
+import { Routes, RouterModule } from '@angular/router';
 
 import { Platform } from '@ionic/angular';
 import { SplashScreen } from '@ionic-native/splash-screen/ngx';
 import { StatusBar } from '@ionic-native/status-bar/ngx';
+// import   from ''
 
 @Component({
   selector: 'app-root',
   templateUrl: 'app.component.html'
 })
+
+
+// const routes: Routes = [
+// {path:'login',
+//     component:LoginComponent}
+
+// ]
+
+
 export class AppComponent {
   public appPages = [
     {
@@ -16,9 +27,14 @@ export class AppComponent {
       icon: 'home'
     },
     {
-      title: 'List',
+      title: 'Add',
       url: '/list',
-      icon: 'list'
+      icon: 'add'
+    }, 
+    {
+      title: 'ViewItem',
+      url: '/view-item',
+      icon: 'eye'
     }
   ];
 
